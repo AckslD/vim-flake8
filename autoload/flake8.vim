@@ -165,7 +165,7 @@ function! s:Flake8()  " {{{
     let s:resultDict = {} 
 
     let l:results=getqflist()
-    let l:has_results=results != []
+    let l:has_results=len(results) > 1
     if l:has_results
 	" save line number of each error message	
         for result in l:results
